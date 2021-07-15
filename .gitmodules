@@ -1,0 +1,3 @@
+[submodule "prebuilt/vendor_vndk"]
+	path = prebuilt/vendor_vndk
+	url = https://github.com/nnippon/vendor_vndk
