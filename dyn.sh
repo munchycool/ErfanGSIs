@@ -11,8 +11,8 @@ cachedir="$LOCALDIR/cache"
 
 # Let's GO
 echo "Prepare env..."
-        bash update.sh
-        umount -l $working
+	bash update.sh
+	umount -l $working
 	rm -rf $cachedir $working
 	mkdir -p "$cachedir" "$working"
 
@@ -32,7 +32,7 @@ echo "Merging process started..."
 	cp -vrp $cachedir/system/* $working/ &> /dev/null
 	sync
 
-if [ -f "$outdir/product.img" ]; then
+if [ -f "$cachedir/product.img" ]; then
 	echo "product.img"
 	rm -rf $working/product $working/system/product 
 	mkdir $working/system/product $cachedir/product 
@@ -42,7 +42,7 @@ if [ -f "$outdir/product.img" ]; then
 	sync
 fi
 
-if [ -f "$outdir/system_ext.img" ]; then
+if [ -f "$cachedir/system_ext.img" ]; then
 	echo "system_ext.img"
 	rm -rf $working/system_ext $working/system/system_ext
 	mkdir $working/system/system_ext $cachedir/system_ext
@@ -52,7 +52,7 @@ if [ -f "$outdir/system_ext.img" ]; then
 	sync
 fi
 
-if [ -f "$outdir/reserve.img" ]; then
+if [ -f "$cachedir/reserve.img" ]; then
 	echo "reserve.img"
 	rm -rf $working/system/reserve
 	mkdir $working/system/reserve $cachedir/reserve
