@@ -25,7 +25,7 @@ Telegram channel: https://t.me/ErfanGSI
 
 ### Download tools
 ```
-git clone --recurse-submodules https://github.com/erfanoabdi/ErfanGSIs.git
+git clone --recurse-submodules https://github.com/munchycool/ErfanGSIs.git
 cd ErfanGSIs
 ```
 
